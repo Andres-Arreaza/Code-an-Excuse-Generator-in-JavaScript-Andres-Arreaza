@@ -26,10 +26,6 @@ function generador() {
   const actionPosicion = Math.floor(Math.random() * action.length);
   const whatPosicion = Math.floor(Math.random() * what.length);
   const whenPosicion = Math.floor(Math.random() * when.length);
-  // console.log(who[3]);
-  // console.log(actionPosicion);
-  // console.log(whatPosicion);
-  // console.log(whenPosicion);
 
   const excuse = `${who[whoPosicion]} ${action[actionPosicion]} ${what[whatPosicion]} ${when[whenPosicion]}`;
   return excuse;
