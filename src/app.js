@@ -5,20 +5,20 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-let who = ["The dog", "My grandma", "The mailman", "My bird"];
-let action = ["ate", "peed", "crushed", "broke"];
-let what = ["my homework", "my phone", "the car"];
-let when = [
+const who = ["The dog", "My grandma", "The mailman", "My bird"];
+const action = ["ate", "peed", "crushed", "broke"];
+const what = ["my homework", "my phone", "the car"];
+const when = [
   "before the class",
   "when I was sleeping",
   "while I was exercising",
   "during my lunch",
-  "while I was praying"
+  "while I was praying",
 ];
 
 window.onload = function() {
-  const p = document.getElementById("excuse");
-  p.innerText = generador();
+  const frase = document.getElementById("excuse");
+  frase.innerText = generador();
 };
 
 function generador() {
@@ -27,6 +27,6 @@ function generador() {
   const whatPosicion = Math.floor(Math.random() * what.length);
   const whenPosicion = Math.floor(Math.random() * when.length);
 
-  const excuse = `${who[whoPosicion]} ${action[actionPosicion]} ${what[whatPosicion]} ${when[whenPosicion]}`;
+  let excuse = `${who[whoPosicion]} ${action[actionPosicion]} ${what[whatPosicion]} ${when[whenPosicion]}`;
   return excuse;
 }
